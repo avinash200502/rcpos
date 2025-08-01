@@ -82,7 +82,8 @@ const Sidebar = ({ isCollapsed, onToggle }) => {
                   {item.submenu.map((subItem, subIndex) => (
                     <div
                       key={subIndex}
-                      className="pl-12 py-2 text-sm text-gray-800 hover:text-blue-600 cursor-pointer transition-colors"
+                      className="pl-12 py-2 text-sm text-gray-900 hover:text-blue-600 cursor-pointer transition-colors 
+background-color:blue"
                     >
                       {item.label === 'Management' && subItem === 'Designation' ? (
                         <Link to="/management/Designation">{subItem}</Link>

@@ -63,12 +63,13 @@ const statsData = [
   },
 ];
 
-const Dashboard = ({ sidebarCollapsed }) => {
+// eslint-disable-next-line no-empty-pattern
+const Dashboard = ({ }) => {
   return (
     <div className="flex-1 bg-gray-50 min-h-screen p-6 w-full">
       <div className="">
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Dashboard</h1>
+          <h1 className="text-sm text-gray-900 mb-2">Dashboard</h1>
           <p className="text-gray-600">
             Welcome back! Here's what's happening with your business today.
           </p>
@@ -91,6 +92,9 @@ const Dashboard = ({ sidebarCollapsed }) => {
           <RecentTransactions />
         </div>
       </div>
+       <footer className="mt-8 py-6 border-t border-gray-200 text-center text-gray-700 text-sm">
+        Copyright © 2020-2025 Reliance Corporation. All Rights Reserved.
+      </footer>
     </div>
   );
 };

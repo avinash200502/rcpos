@@ -846,24 +846,24 @@ export default function EmployeeManagement() {
 
   // Employee List Page
   return (
-    <div className="max-w-full mx-auto p-6 bg-white rounded-lg shadow-md font-sans">
+    <div className="w-full mx-auto p-6 bg-white rounded-lg shadow-md font-sans">
       {/* Header & Breadcrumb */}
       <div className="flex justify-between items-center mb-6">
         <div>
-          <nav className="text-gray-600 text-sm mb-1">
-            <span>Dashboards</span> /{" "}
-            <span className="font-semibold text-gray-900">Employee List</span>
-          </nav>
-          <h1 className="text-3xl font-bold text-gray-900">Employee List</h1>
+         
+          <h1 className=" text-gray-900">Employee List</h1>
         </div>
+        
         <button
           onClick={startAddEmployee}
           className="px-5 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition flex items-center gap-2"
           aria-label="Add Employee"
         >
-          <Plus size={20} />
+          
           Add Employee
         </button>
+
+        
       </div>
 
       {/* Controls: Entries per page and Search */}
@@ -1029,6 +1029,9 @@ export default function EmployeeManagement() {
           Next
         </button>
       </div>
+       <footer className="mt-8 py-6 border-t border-gray-200 text-center text-gray-700 text-sm">
+        Copyright © 2020-2025 Reliance Corporation. All Rights Reserved.
+      </footer>
     </div>
   );
 }

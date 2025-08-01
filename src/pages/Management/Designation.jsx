@@ -171,7 +171,7 @@ export default function Designation() {
                 </option>
               ))}
             </select>
-            <span className="text-sm text-gray-800">entriesssssss per page</span>
+            <span className="text-sm text-gray-800">entries per page</span>
           </div>
 
           {/* Table */}

@@ -161,7 +161,7 @@ export default function Department() {
                 </option>
               ))}
             </select>
-            <span className="text-sm text-gray-800">entriesssssss per page</span>
+            <span className="text-sm text-gray-800">entries per page</span>
           </div>
 
           {/* Department table */}
@@ -350,6 +350,10 @@ export default function Department() {
           </form>
         </div>
       )}
+
+       <footer className="mt-8 py-6 border-t border-gray-200 text-center text-gray-700 text-sm">
+        Copyright © 2020-2025 Reliance Corporation. All Rights Reserved.
+      </footer>
     </div>
   );
 }
