@@ -9,13 +9,14 @@ const initialDepartments = [
 ];
 
 const companies = ["Reliance", "Google", "Microsoft", "Amazon"];
+const perPageOptions = [5, 10, 20, 50];
 
 export default function Department() {
   console.log("Department component is loading..."); // Debug log
   
   const [departments, setDepartments] = useState(initialDepartments);
   const [search, setSearch] = useState("");
-  const [entriesPerPage] = useState(10);
+   const [entriesPerPage, setEntriesPerPage] = useState(10);
   const [page, setPage] = useState(1);
 
   // Manage view mode: "list" | "add" | "edit"
@@ -118,7 +119,7 @@ export default function Department() {
         <>
           {/* Header/title and controls */}
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
-            <h1 className="font-bold text-gray-900 text-xs">Department List</h1>
+            <h1 className=" text-gray-900 text-sm">Department List</h1>
             <div className="flex flex-row flex-wrap gap-3 md:gap-4 items-center">
               <input
                 type="search"
@@ -137,10 +138,30 @@ export default function Department() {
                 onClick={openAddForm}
                 aria-label="Add Department"
               >
-                <Plus className="w-4 h-4 mr-1" />
-                + Department
+               
+                Add Department
               </button>
             </div>
+          </div>
+
+ <div className="flex items-center gap-2 mb-3">
+            <span className="text-sm text-gray-800">Show</span>
+            <select
+              value={entriesPerPage}
+              onChange={(e) => {
+                setEntriesPerPage(Number(e.target.value));
+                setPage(1);
+              }}
+              className="border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-900"
+              aria-label="Entries per page"
+            >
+              {perPageOptions.map((opt) => (
+                <option key={opt} value={opt}>
+                  {opt}
+                </option>
+              ))}
+            </select>
+            <span className="text-sm text-gray-800">entriesssssss per page</span>
           </div>
 
           {/* Department table */}

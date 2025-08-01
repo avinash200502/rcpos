@@ -127,7 +127,8 @@ export default function Designation() {
         <>
           {/* Header/title and controls */}
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
-            <h1 className="font-bold text-gray-900 text-base">Designation List</h1>
+           <h1 className="text-gray-900 text-[5px]">Designation List</h1>
+
             <div className="flex flex-row flex-wrap gap-3 md:gap-4 items-center">
               <input
                 type="search"
